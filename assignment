@@ -1,0 +1,27 @@
+Q1 #
+Creating directory structure
+ans:
+mkdir -p A/{B/{D/{I/M/Z,J/L/Z},E/H/L/Z},C/{F/H/L/Z,G/K/L/Z}}
+tree A
+
+Q2 #
+Providing the permission to a user only to execute the date command and removing the permission for executing date command for root. 
+ans:
+sudo su   (login into root)
+useradd -s /bin/date dtt   (adding user)
+chmod -x /bin/date  (removing permission) 
+setfacl -m u:dtt:rwx /bin/date (setting permision for dtt user)
+exit (exiting from root)
+date (run date command then it will show permission denied)
+sudo su - dt (it will be able to run only date command)
+
+Q3 #
+copy one user data into another user 
+ans:
+cp -r /home/A/k1 /home/B/
+cp -r /home/B/k2 /home/A/
+
+Q4 #
+run cal command for 10sec and store output in /tmp/a.txt
+ans:
+watch -n 10 "(cal)|tee -a /tmp/a.txt"
