@@ -1,7 +1,7 @@
 Q1 #
 Creating directory structure
 ans:
-mkdir -p A/{B/{D/{I/M/Z,J/L/Z},E/H/L/Z},C/{F/H/L/Z,G/K/L/Z}}
+mkdir -p A/{B/{D/{I/M/Z,J/L/Z},E/H/L/Z},C/{F/H/L/Z,G/K/L/Z}} (This will create 21 directories)
 tree A
 
 Q2 #
